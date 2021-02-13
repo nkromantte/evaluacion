@@ -46,7 +46,7 @@ class Matriz{
             for (int c = 0; c < this.Mresultado[f].length; c++) {
                 this.Mresultado[f][c] = this.matriz[f][c] + this.matriz2[f][c];
                 System.out.print( this.Mresultado[f][c] );
-                System.out.println(", ");
+                System.out.print(", ");
             }
             System.out.println("");
             }
@@ -56,6 +56,7 @@ class Matriz{
             for (int c = 0; c < this.Mresultado[f].length; c++) {
                 this.Mresultado[f][c] = this.Mresultado[f][c] * this.matriz3[c][f];
                 System.out.print( this.Mresultado[f][c] );
+                System.out.print(", ");
             }
             System.out.println("");
         }
@@ -115,13 +116,21 @@ class Matriz{
 
             for(int f=0;f<this.matriz.length;f++) {
                 for (int c = 0; c < this.matriz[f].length; c++) {
-                    if ( (c==f)&&(this.matriz[f][c] == 1) ) {
+                    if  (c==f){
+                        if (this.matriz[f][c] == 1){
 
-                    }else e++;
-                    if ( (c!=f)&&(this.matriz[f][c] == 0
-                    ) ){
+                        }else{ e++;
+                        }
+                    }
 
-                    }else{ e++;}
+                    if  (c!=f){
+                        if (this.matriz[f][c] == 0){
+
+                        }else{ e++;
+                        }
+                    }
+
+
                 }
             }
 
@@ -145,6 +154,14 @@ class Matriz{
         }
             public void recorrerTriangulo() {
                 boolean resultado = false;
+
+                for(int f=0;f<this.matriz.length;f++) {
+                    for (int c = 0; c < this.matriz[f].length; c++) {
+
+                    }
+                }
+
+
                 if  (resultado == true ) {
                     System.out.println("Matriz identidad");
                 } else {
