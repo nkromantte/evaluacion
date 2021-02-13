@@ -46,6 +46,7 @@ class Matriz{
             for (int c = 0; c < this.Mresultado[f].length; c++) {
                 this.Mresultado[f][c] = this.matriz[f][c] + this.matriz2[f][c];
                 System.out.print( this.Mresultado[f][c] );
+                System.out.println(", ");
             }
             System.out.println("");
             }
@@ -193,7 +194,7 @@ public class Main {
                     Matriz opc1 = new  Matriz(x);
                     opc1.setTamano1(x,x,x);
                     opc1.setSuma(x);
-                    opc1.resultadoSuma();
+
                     break;
                 case "2":
                     boolean e2 = false;
