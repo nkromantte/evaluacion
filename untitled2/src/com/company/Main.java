@@ -153,19 +153,39 @@ class Matriz{
             recorrerTriangulo();
         }
             public void recorrerTriangulo() {
-                boolean resultado = false;
+                boolean resultado = true;
 
                 for(int f=0;f<this.matriz.length;f++) {
                     for (int c = 0; c < this.matriz[f].length; c++) {
+                                if  (f==0){
+                                   if(this.matriz[f][c]!=0){}
+                                   else{resultado = false; break;}
+                                }
 
+                                if  (f==c){
+                                 if(this.matriz[f][c]!=0){}
+                                 else{resultado = false; break;}
+                                }
+
+                                if (f>c){
+                                    if(this.matriz[f][c]==0){}
+                                    else{resultado = false; break;}
+                                }
+
+                                if (c > f) {
+                                    if (this.matriz[f][c] != 0) {
+                                    } else {
+                                        resultado = false;
+                                        break;
+                                    }
+                                }
                     }
                 }
 
-
                 if  (resultado == true ) {
-                    System.out.println("Matriz identidad");
+                    System.out.println("Si es Triaunglo Superior");
                 } else {
-                    System.out.println("No es matriz identidad");
+                    System.out.println("No es Triaunglo Superior");
                 }
             }
 
